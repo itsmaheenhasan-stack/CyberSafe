@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberSafe Pakistan | National Digital Literacy Initiative</title>
+    <title>PakCyberShield Pakistan | National Digital Literacy Initiative</title>
     <!-- Tailwind CSS (V4) for premium styling -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome for security icons -->
@@ -35,7 +35,7 @@
                 </div>
                 <div>
                     <h1 class="text-xl font-black tracking-tight text-white">
-                        CyberSafe <span class="text-emerald-400">Pakistan</span>
+                        PakCyberShield <span class="text-emerald-400">Pakistan</span>
                     </h1>
                     <p class="text-xs text-gray-400 font-medium tracking-wide uppercase">National Security Campaign</p>
                 </div>
@@ -320,7 +320,7 @@
 
     <!-- Footer -->
     <footer class="border-t border-gray-900 bg-gray-950 py-10 mt-12 text-center text-sm text-gray-500 space-y-3 px-6">
-        <p class="font-medium">© 2026 CyberSafe Pakistan Initiative. All Rights Reserved.</p>
+        <p class="font-medium">© 2026 PakCyberShield Pakistan Initiative. All Rights Reserved.</p>
         <p class="text-xs text-gray-600 max-w-xl mx-auto">
             This platform acts as a secure pedagogical interface to demonstrate digital safety methodologies. Built intentionally for honest local verification.
         </p>
@@ -402,10 +402,10 @@
 
         // ----------------- SYSTEM METRICS ENGINE -----------------
         function initMetrics() {
-            let logs = localStorage.getItem('cybersafe_logs');
+            let logs = localStorage.getItem('PakCyberShield_logs');
             if (!logs) {
                 logs = [];
-                localStorage.setItem('cybersafe_logs', JSON.stringify(logs));
+                localStorage.setItem('PakCyberShield_logs', JSON.stringify(logs));
             } else {
                 logs = JSON.parse(logs);
             }
@@ -433,9 +433,9 @@
                 date: new Date().toLocaleDateString('en-PK', { year: 'numeric', month: 'short', day: 'numeric' })
             };
 
-            const logs = JSON.parse(localStorage.getItem('cybersafe_logs')) || [];
+            const logs = JSON.parse(localStorage.getItem('PakCyberShield_logs')) || [];
             logs.push(newLog);
-            localStorage.setItem('cybersafe_logs', JSON.stringify(logs));
+            localStorage.setItem('PakCyberShield_logs', JSON.stringify(logs));
 
             // Reset Form Fields
             schoolInput.value = '';
@@ -492,9 +492,9 @@
         }
 
         function deleteLog(id) {
-            let logs = JSON.parse(localStorage.getItem('cybersafe_logs')) || [];
+            let logs = JSON.parse(localStorage.getItem('PakCyberShield_logs')) || [];
             logs = logs.filter(log => log.id !== id);
-            localStorage.setItem('cybersafe_logs', JSON.stringify(logs));
+            localStorage.setItem('PakCyberShield_logs', JSON.stringify(logs));
             renderRegistry(logs);
             showToast("Log Record Removed Safely", 'info');
         }
